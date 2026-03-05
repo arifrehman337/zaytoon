@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaytoon |  زيتون - Authentic Arabic Cuisine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-olive"></div>
+        <div class="loader-text">
+            <span class="loader-en">Zaytoon</span>
+            <span class="loader-ar arabic">زيتون</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <a href="#home" class="logo" onclick="scrollToSection('home'); return false;">
+            <span class="logo-en">Zaytoon</span>
+            <span class="logo-ar arabic">زيتون</span>
+        </a>
+        
+        <ul id="navLinks" class="nav-links">
+            <li><a onclick="scrollToSection('home')">Home</a></li>
+            <li><a onclick="scrollToSection('menu')">Menu</a></li>
+            <li><a onclick="scrollToSection('reserve')">Reserve</a></li>
+        </ul>
+
+        <div id="hamburger" class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <!-- <span class="hero-badge">Since 2010</span> -->
+            <h1 class="hero-title">
+                <span class="title-en">Zaytoon</span>
+                <span class="title-ar arabic">زيتون</span>
+            </h1>
+            <p class="hero-tagline">Where Tradition Meets Taste</p>
+            <!-- <p class="hero-subtitle">Experience authentic Levantine cuisine crafted with love</p> -->
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary" onclick="scrollToSection('menu'); return false;">Explore Menu</a>
+                <a href="#reserve" class="btn btn-secondary" onclick="scrollToSection('reserve'); return false;">Book a Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="section menu">
+        <div class="section-header">
+            <span class="section-label">Our Menu</span>
+            <h2 class="section-title">Signature Dishes</h2>
+        </div>
+        <div class="menu-tabs">
+            <button class="tab-btn active" onclick="filterMenu('all', this)">All</button>
+            <button class="tab-btn" onclick="filterMenu('starters', this)">Starters</button>
+            <button class="tab-btn" onclick="filterMenu('mains', this)">Mains</button>
+            <button class="tab-btn" onclick="filterMenu('desserts', this)">Desserts</button>
+        </div>
+        <div id="menuGrid" class="menu-grid">
+            <!-- Menu items inserted by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="reserve" class="section contact">
+        <div class="section-header">
+            <span class="section-label">Reservations</span>
+            <h2 class="section-title">Book Your Table</h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Visit Us</h3>
+                
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <div>
+                        <strong>Location</strong>
+                        <p>Peshawar ,Pakistan</p>
+                        <a href="https://maps.app.goo.gl/2ZrsaBsoJJjSEBWY9" target="_blank" class="btn btn-primary" style="margin-top: 0.5rem; padding: 0.5rem 1rem; font-size: 0.8rem; display: inline-block;">Get Directions</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icon">🕐</span>
+                    <div>
+                        <strong>Hours</strong>
+                        <p>Mon-Sun: 12pm - 10pm</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <div>
+                        <strong>Phone</strong>
+                        <a href="tel:+15552345678">0915432346</a>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Reservation submitted!');">
+                <div class="form-row">
+                    <input type="text" placeholder="Name" class="form-input" required>
+                    
+                    
+                </div>
+                <div class="form-row">
+                    
+                    <input type="number" placeholder="Guests" class="form-input" min="1" max="10" required>
+                    
+                </div>
+                <div class="form-row">
+                    <input type="date" class="form-input" required>
+                    
+                </div>
+                <textarea placeholder="Special Requests" rows="3" class="form-input"></textarea>
+                <button type="submit" class="btn btn-primary">Confirm Reservation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo logo">
+            <span class="logo-en">Zaytoon</span>
+            <span class="logo-ar arabic">زيتون</span>
+        </div>
+        <p>Authentic Levantine cuisine, served with love since 2010.</p>
+        <p style="margin-top: 1rem; font-size: 0.75rem;">&copy; 2026 Zaytoon Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
